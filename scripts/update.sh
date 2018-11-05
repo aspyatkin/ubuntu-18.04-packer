@@ -1,9 +1,6 @@
 #!/bin/sh -eux
 export DEBIAN_FRONTEND=noninteractive
 
-# Disable release-upgrades
-sed -i.bak 's/^Prompt=.*$/Prompt=never/' /etc/update-manager/release-upgrades;
-
 # Update the package list
 apt-get -y update;
 
