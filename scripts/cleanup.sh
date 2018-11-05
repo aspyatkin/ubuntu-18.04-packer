@@ -45,10 +45,10 @@ apt-get -y purge popularity-contest installation-report command-not-found comman
 # Exlude the files we don't need w/o uninstalling linux-firmware
 echo "==> Setup dpkg excludes for linux-firmware"
 cat <<_EOF_ | cat >> /etc/dpkg/dpkg.cfg.d/excludes
-#BENTO-BEGIN
+#PACKER-BEGIN
 path-exclude=/lib/firmware/*
 path-exclude=/usr/share/doc/linux-firmware/*
-#BENTO-END
+#PACKER-END
 _EOF_
 
 # Delete the massive firmware packages
