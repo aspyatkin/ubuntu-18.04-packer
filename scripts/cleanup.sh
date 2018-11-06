@@ -42,6 +42,48 @@ apt-get -y purge ppp pppconfig pppoeconf;
 # Delete oddities
 apt-get -y purge popularity-contest installation-report command-not-found command-not-found-data friendly-recovery bash-completion fonts-ubuntu-font-family-console laptop-detect;
 
+# Delete some other packages
+apt-get -y purge \
+    usbutils \
+    libusb-1.0-0 \
+    binutils \
+    console-setup \
+    console-setup-linux \
+    crda \
+    wireless-regdb \
+    iw \
+    eject \
+    file \
+    keyboard-configuration \
+    krb5-locales \
+    libmagic1 \
+    make \
+    manpages \
+    isc-dhcp-common \
+    netcat-openbsd \
+    os-prober \
+    tasksel \
+    tasksel-data \
+    vim-common \
+    whiptail \
+    xkb-data \
+    pciutils \
+    publicsuffix \
+    gir1.2-glib-2.0 \
+    shared-mime-info \
+    ubuntu-advantage-tools \
+    xdg-user-dirs \
+    xxd \
+    xz-utils \
+    libnewt0.52 \
+    libslang2 \
+    libmagic-mgc \
+    libnl-3-200 \
+    libfribidi0 \
+    libatm1 \
+    libgirepository-1.0-1 \
+;
+
 # Exlude the files we don't need w/o uninstalling linux-firmware
 echo "==> Setup dpkg excludes for linux-firmware"
 cat <<_EOF_ | cat >> /etc/dpkg/dpkg.cfg.d/excludes
