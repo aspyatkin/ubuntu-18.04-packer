@@ -1,6 +1,6 @@
 {
   "description": "A Packer template to build Ubuntu 18.04 Server box",
-  "min_packer_version": "1.3.2",
+  "min_packer_version": "1.3.5",
   "builders": [
     {
       "type": "virtualbox-iso",
@@ -38,9 +38,9 @@
       "hard_drive_interface": "sata",
       "headless": "",
       "http_directory": "http",
-      "iso_checksum": "a5b0ea5918f850124f3d72ef4b85bda82f0fcd02ec721be19c1a6952791c8ee8",
+      "iso_checksum": "a2cb36dc010d98ad9253ea5ad5a07fd6b409e3412c48f1860536970b073c98f5",
       "iso_checksum_type": "sha256",
-      "iso_url": "http://cdimage.ubuntu.com/ubuntu/releases/18.04.1/release/ubuntu-18.04.1-server-amd64.iso",
+      "iso_url": "http://cdimage.ubuntu.com/ubuntu/releases/18.04.2/release/ubuntu-18.04.2-server-amd64.iso",
       "output_directory": "build",
       "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
       "ssh_wait_timeout": "10000s",
