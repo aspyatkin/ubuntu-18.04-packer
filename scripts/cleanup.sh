@@ -33,17 +33,26 @@ dpkg --list \
     | grep -- '-doc$' \
     | xargs apt-get -y purge;
 
-# Delete X11 libraries
-apt-get -y purge libx11-data xauth libxmuu1 libxcb1 libx11-6 libxext6;
-
-# Delete obsolete networking
-apt-get -y purge ppp pppconfig pppoeconf;
-
-# Delete oddities
-apt-get -y purge popularity-contest installation-report command-not-found command-not-found-data friendly-recovery bash-completion fonts-ubuntu-font-family-console laptop-detect;
-
-# Delete some other packages
+# Delete packages
 apt-get -y purge \
+    libx11-data \
+    xauth \
+    libxmuu1 \
+    libxcb1 \
+    libx11-6 \
+    libxext6 \
+    libxau6 \
+    ppp \
+    pppconfig \
+    pppoeconf \
+    popularity-contest \
+    installation-report \
+    command-not-found \
+    command-not-found-data \
+    friendly-recovery \
+    bash-completion \
+    fonts-ubuntu-font-family-console \
+    laptop-detect \
     usbutils \
     libusb-1.0-0 \
     binutils \
@@ -60,6 +69,7 @@ apt-get -y purge \
     make \
     manpages \
     isc-dhcp-common \
+    isc-dhcp-client \
     netcat-openbsd \
     os-prober \
     tasksel \
@@ -82,6 +92,12 @@ apt-get -y purge \
     libfribidi0 \
     libatm1 \
     libgirepository-1.0-1 \
+    rsyslog \
+    debconf-i18n \
+    amd64-microcode \
+    intel-microcode \
+    tzdata \
+    locales \
 ;
 
 # Exlude the files we don't need w/o uninstalling linux-firmware
