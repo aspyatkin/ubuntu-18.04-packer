@@ -1,6 +1,6 @@
 {
   "description": "A Packer template to build Ubuntu 18.04 Server box",
-  "min_packer_version": "1.4.4",
+  "min_packer_version": "1.5.1",
   "builders": [
     {
       "type": "virtualbox-iso",
@@ -117,7 +117,7 @@
   "variables": {
     "memory": "512",
     "cpus": "1",
-    "disk_size": "8192",
+    "disk_size": "8448",
     "output_directory": "build",
     "vm_name": "packer-ubuntu-18.04-server-amd64"
   }

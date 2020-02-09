@@ -15,6 +15,18 @@ dpkg --list \
     | grep -v `uname -r` \
     | xargs apt-get -y purge;
 
+dpkg --list \
+    | awk '{ print $2 }' \
+    | grep 'linux-image-unsigned-.*-generic' \
+    | grep -v `uname -r` \
+    | xargs apt-get -y purge;
+
+dpkg --list \
+    | awk '{ print $2 }' \
+    | grep 'linux-modules-.*-generic' \
+    | grep -v `uname -r` \
+    | xargs apt-get -y purge;
+
 # Delete Linux source
 dpkg --list \
     | awk '{ print $2 }' \
@@ -97,7 +109,6 @@ apt-get -y purge \
     amd64-microcode \
     intel-microcode \
     tzdata \
-    locales \
 ;
 
 # Exlude the files we don't need w/o uninstalling linux-firmware
