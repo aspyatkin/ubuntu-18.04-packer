@@ -17,3 +17,5 @@ sync
 sleep 2
 sync
 rm /boot/whitespace
+
+fstrim -a
